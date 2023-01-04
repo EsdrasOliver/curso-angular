@@ -20,5 +20,9 @@ class Matematica {
     }
 }
 
-var n1 = 'sdfsdf';
+var n1:number = 1;
 n1 = 4;
+
+//aqui ocorre erro por falta da tipagem da variavel
+//var n1 = 'sdfsdf';
+//n1 = 4;
