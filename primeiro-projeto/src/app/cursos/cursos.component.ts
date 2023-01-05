@@ -12,7 +12,7 @@ export class CursosComponent implements OnInit {
 
   cursos: string[];
 
-  constructor(private cursosService: CursosService) { 
+  constructor(private cursosService: CursosService) { // injeção de dependências com o constructor
     this.nomePortal = 'http://loiane.training';
 
     /*for (let i=0; i<this.cursos.length; i++){
@@ -21,7 +21,7 @@ export class CursosComponent implements OnInit {
 
     //var servico = new CursosService();
 
-    this.cursos = this.cursosService.getCursos();
+    this.cursos = this.cursosService.getCursos(); // instaciando classe
 
   }
 

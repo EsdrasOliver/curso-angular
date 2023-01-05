@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'; // prepara a aplicação para ser rodada em um browser
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { CursosModule } from './cursos/cursos.module';
     BrowserModule,
     CursosModule
   ],
-  providers: [],
+  providers: [], // aqui coloca os servicos
   bootstrap: [AppComponent]
 })
 export class AppModule { }
