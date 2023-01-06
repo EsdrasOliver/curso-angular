@@ -13,13 +13,19 @@
     <img src="{{ urlImagem }}">
     <img [src]="urlImagem">
     <img bind-src="urlImagem">
+    <!--
+      Valor do componente para o Template
+      Usase colchetes <img [src]="urlimg">
+      Formato padrão é através de bind-nomePropriedade <img bind-src="urlimg">
+      Quando não existe uma propriedade no elemento, usa-se [attr.colspan]
+    -->
   </article>
 
   <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
-      <select #classe (change)="0">
+      <select #classe (change)="0"> <!-- #classe é uma variavel q nela tem o valor de qual option foi selecionado -->
         <option value="alert-success">Sucesso</option>
         <option value="alert-info">Info</option>
         <option value="alert-warning">Alerta</option>
@@ -27,12 +33,12 @@
       </select>
       <br><br>
 
-      <div class="alert {{ classe.value }}" role="alert">
+      <div class="alert {{ classe.value }}" role="alert"> <!-- aqui o texto será colorido conforme o o option selecionado -->
         Texto colorido conforme valor do combobox.
       </div>
 
       <div class="alert" role="alert"
-        [class.alert-success]="classe.value == 'alert-success'">
+        [class.alert-success]="classe.value == 'alert-success'"> <!-- quando a expressão for vdd a class será ativada -->
         Sucesso
       </div>
 
